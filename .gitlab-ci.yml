@@ -14,7 +14,7 @@ staging:
   - apt-get update -qy
   - apt-get install -y ruby-dev
   - gem install dpl
-  - dpl --provider=heroku --app=obscure-fortress-33953 --api-key=cc8e84b6-0ac0-4e95-9107-8f37f6374dfd
+  - dpl --provider=heroku --app=gururajme-staging --api-key=cc8e84b6-0ac0-4e95-9107-8f37f6374dfd
   only:
   - master
 
@@ -24,6 +24,7 @@ production:
   - apt-get update -qy
   - apt-get install -y ruby-dev
   - gem install dpl
-  - dpl --provider=heroku --app=django-continue-production --api-key=cc8e84b6-0ac0-4e95-9107-8f37f6374dfd
+  - dpl --provider=heroku --app=gururajme-production --api-key=cc8e84b6-0ac0-4e95-9107-8f37f6374dfd
   only:
   - tags
+
