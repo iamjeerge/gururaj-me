@@ -39,7 +39,7 @@ function init() {
             new google.maps.Marker({
                 position: latlng,
                 map: map,
-                icon: 'http://localhost:8000/supporters/images/loc.png'
+                icon: 'http://www.gururaj.me/static/images/loc.png'
             });
 
         });
