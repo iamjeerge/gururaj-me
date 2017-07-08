@@ -1,0 +1,29 @@
+test:
+  script:
+  # this configures Django application to use attached postgres database that is run on `postgres` host
+  - export DATABASE_URL=postgres://postgres:@postgres:5432/python-test-app
+  - apt-get update -qy
+  - apt-get install -y build-essential python3.4-dev python3-pip libpq-dev
+  - pip3 install -r requirements.txt
+  - coverage report
+  - python3 manage.py test
+
+staging:
+  type: deploy
+  script:
+  - apt-get update -qy
+  - apt-get install -y ruby-dev
+  - gem install dpl
+  - dpl --provider=heroku --app=obscure-fortress-33953 --api-key=cc8e84b6-0ac0-4e95-9107-8f37f6374dfd
+  only:
+  - master
+
+production:
+  type: deploy
+  script:
+  - apt-get update -qy
+  - apt-get install -y ruby-dev
+  - gem install dpl
+  - dpl --provider=heroku --app=django-continue-production --api-key=cc8e84b6-0ac0-4e95-9107-8f37f6374dfd
+  only:
+  - tags
