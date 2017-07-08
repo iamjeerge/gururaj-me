@@ -1,6 +1,7 @@
 coverage==4.4.1
 dj-database-url==0.4.2
 Django==1.11.3
+django-environ==0.4.3
 django-filter==1.0.4
 django-pipeline==1.6.13
 django-pipeline-browserify==0.6.1
