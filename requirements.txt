@@ -1,0 +1,16 @@
+coverage==4.4.1
+dj-database-url==0.4.2
+Django==1.11.3
+django-filter==1.0.4
+django-pipeline==1.6.13
+django-pipeline-browserify==0.6.1
+django-postgrespool==0.3.1
+djangorestframework==3.6.3
+gunicorn==19.7.1
+httpie==0.9.9
+Markdown==2.6.8
+psycopg2==2.7.1
+Pygments==2.2.0
+requests==2.18.1
+sqlparse==0.2.3
+whitenoise==3.3.0
