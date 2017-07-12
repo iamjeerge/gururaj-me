@@ -18,8 +18,10 @@ from django.contrib import admin
 from django.views.generic import TemplateView
 from django.conf import settings
 from django.conf.urls.static import static
+from blogs.views import current_datetime
 
 urlpatterns = [
+	url(r'^.well-known/acme-challenge/mEun7MAQpQ2z2DgliwH0GLleKV1zK9m1jXCz5N2LL4Q$', current_datetime),
     url(r'^$', TemplateView.as_view(template_name="index.html")),
     url(r'^admin/', admin.site.urls),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
