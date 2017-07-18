@@ -29,7 +29,7 @@ PROJECT_ROOT = environ.Path(__file__) - 2
 SECRET_KEY = 'c%b)36n(76oaur^e!h0)0*8vcrhp#)8y!l*09tw@qsfs6wjuna'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -89,7 +89,6 @@ TEMPLATES = [
                 'django.template.context_processors.i18n',
                 'django.template.context_processors.media',
                 'django.template.context_processors.static',
-                # 'django.core.context_processors.request',
             ],
         },
     },
@@ -182,5 +181,3 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 MEDIA_ROOT = os.path.join(str(PROJECT_ROOT), 'media')
 MEDIA_URL = '/media/'
-
-WAGTAIL_SITE_NAME = 'Puput blog'
