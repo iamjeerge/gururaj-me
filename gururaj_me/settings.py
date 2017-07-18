@@ -14,6 +14,7 @@ import os
 import dj_database_url
 import sys
 import environ
+from puput import PUPUT_APPS
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -28,7 +29,7 @@ PROJECT_ROOT = environ.Path(__file__) - 2
 SECRET_KEY = 'c%b)36n(76oaur^e!h0)0*8vcrhp#)8y!l*09tw@qsfs6wjuna'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -43,8 +44,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'opbeat.contrib.django',
-    'blogs'
 ]
+
+INSTALLED_APPS += PUPUT_APPS
 
 OPBEAT = {
     'ORGANIZATION_ID': '7bfd27b572d34db8a5497dd96e8128cc',
@@ -62,6 +64,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'opbeat.contrib.django.middleware.OpbeatAPMMiddleware',
+    'wagtail.wagtailcore.middleware.SiteMiddleware',
+    'wagtail.wagtailredirects.middleware.RedirectMiddleware',
 ]
 
 ROOT_URLCONF = 'gururaj_me.urls'
@@ -115,16 +119,20 @@ if 'test' not in sys.argv:
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+        'UserAttributeSimilarityValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+        'MinimumLengthValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+        'CommonPasswordValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+        'NumericPasswordValidator',
     },
 ]
 
@@ -155,7 +163,7 @@ REST_FRAMEWORK = {
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-STATIC_ROOT = os.path.join(str(PROJECT_ROOT), 'staticfiles')  #env("STATIC_ROOT", default="staticfiles")
+STATIC_ROOT = os.path.join(str(PROJECT_ROOT), 'staticfiles')
 
 STATIC_URL = '/static/'
 
@@ -170,3 +178,6 @@ STATICFILES_FINDERS = (
 )
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+MEDIA_ROOT = os.path.join(str(PROJECT_ROOT), 'media')
+MEDIA_URL = '/media/'
