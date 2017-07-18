@@ -13,15 +13,34 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+from django.conf.urls import url,include
 from django.contrib import admin
 from django.views.generic import TemplateView
 from django.conf import settings
 from django.conf.urls.static import static
-from blogs.views import current_datetime
+
 
 urlpatterns = [
-	url(r'^.well-known/acme-challenge/mEun7MAQpQ2z2DgliwH0GLleKV1zK9m1jXCz5N2LL4Q$', current_datetime),
     url(r'^$', TemplateView.as_view(template_name="index.html")),
     url(r'^admin/', admin.site.urls),
+    url(r'', include('puput.urls')),
+    # url(r'', include('wagtail_urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+
+if settings.DEBUG:
+    import os
+    from django.conf.urls.static import static
+    from django.views.generic.base import RedirectView
+    from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
+    # tell gunicorn where static files are in dev mode
+    urlpatterns += staticfiles_urlpatterns()
+    urlpatterns += static(
+        settings.MEDIA_URL + 'images/',
+        document_root=os.path.join(settings.MEDIA_ROOT, 'images')
+    )
+    # urlpatterns += [
+    #     (r'^favicon\.ico$', RedirectView.as_view(
+    #         url=settings.STATIC_URL + 'myapp/images/favicon.ico')),
+    # ]
