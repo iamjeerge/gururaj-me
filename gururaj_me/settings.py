@@ -29,7 +29,7 @@ PROJECT_ROOT = environ.Path(__file__) - 2
 SECRET_KEY = 'c%b)36n(76oaur^e!h0)0*8vcrhp#)8y!l*09tw@qsfs6wjuna'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -56,7 +56,7 @@ OPBEAT = {
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # 'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -170,13 +170,17 @@ MEDIA_URL = '/media/'
 
 STATICFILES_DIRS = (
     os.path.join(str(PROJECT_ROOT), 'static'),
-    # str(environ.Path(SERVER_DIR).path('static')),
 )
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     'compressor.finders.CompressorFinder',
+)
+
+# django-compressor settings
+COMPRESS_PRECOMPILERS = (
+    ('text/x-scss', 'django_libsass.SassCompiler'),
 )
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
