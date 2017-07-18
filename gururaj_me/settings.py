@@ -14,6 +14,7 @@ import os
 import dj_database_url
 import sys
 import environ
+from puput import PUPUT_APPS
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -43,8 +44,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'opbeat.contrib.django',
-    'blogs'
+    # 'blogs'
 ]
+
+INSTALLED_APPS += PUPUT_APPS
 
 OPBEAT = {
     'ORGANIZATION_ID': '7bfd27b572d34db8a5497dd96e8128cc',
@@ -62,6 +65,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'opbeat.contrib.django.middleware.OpbeatAPMMiddleware',
+    'wagtail.wagtailcore.middleware.SiteMiddleware',
+    'wagtail.wagtailredirects.middleware.RedirectMiddleware'
 ]
 
 ROOT_URLCONF = 'gururaj_me.urls'
@@ -83,8 +88,9 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.i18n',
-                'django.template.context_processors.media',
+                # 'django.template.context_processors.media',
                 'django.template.context_processors.static',
+                'django.template.context_processors.tz',
             ],
         },
     },
@@ -155,9 +161,13 @@ REST_FRAMEWORK = {
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-STATIC_ROOT = os.path.join(str(PROJECT_ROOT), 'staticfiles')  #env("STATIC_ROOT", default="staticfiles")
+STATIC_ROOT = os.path.join(str(PROJECT_ROOT), 'staticfiles')
 
 STATIC_URL = '/static/'
+
+MEDIA_ROOT = os.path.join(str(PROJECT_ROOT), 'media')
+
+MEDIA_URL = '/media/'
 
 STATICFILES_DIRS = (
     os.path.join(str(PROJECT_ROOT), 'static'),
@@ -167,6 +177,9 @@ STATICFILES_DIRS = (
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
 )
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+WAGTAIL_SITE_NAME = 'gururaj.me blog'

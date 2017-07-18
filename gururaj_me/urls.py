@@ -19,15 +19,9 @@ from django.views.generic import TemplateView
 from django.conf import settings
 from django.conf.urls.static import static
 
-from wagtail.wagtailadmin import urls as wagtailadmin_urls
-from wagtail.wagtaildocs import urls as wagtaildocs_urls
-from wagtail.wagtailcore import urls as wagtail_urls
-
 
 urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name="index.html")),
     url(r'^admin/', admin.site.urls),
-    url(r'^cms/', include(wagtailadmin_urls)),
-    url(r'^documents/', include(wagtaildocs_urls)),
-    url(r'^pages/', include(wagtail_urls)),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    url(r'', include('puput.urls')),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
