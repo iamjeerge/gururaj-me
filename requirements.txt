@@ -15,4 +15,4 @@ Pygments==2.2.0
 requests==2.18.1
 sqlparse==0.2.3
 whitenoise==3.3.0
-puput==0.8
+puput==0.9
