@@ -8,15 +8,15 @@ test:
   #- coverage run manage.py test
   #- coverage report -m
 
-staging:
-  type: deploy
-  script:
-  - apt-get update -qy
-  - apt-get install -y ruby-dev
-  - gem install dpl
-  - dpl --provider=heroku --app=gururajme-staging --api-key=cc8e84b6-0ac0-4e95-9107-8f37f6374dfd
-  only:
-  - master
+#staging:
+#  type: deploy
+#  script:
+#  - apt-get update -qy
+#  - apt-get install -y ruby-dev
+#  - gem install dpl
+#  - dpl --provider=heroku --app=gururajme-staging --api-key=cc8e84b6-0ac0-4e95-9107-8f37f6374dfd
+#  only:
+#  - master
 
 production:
   type: deploy
