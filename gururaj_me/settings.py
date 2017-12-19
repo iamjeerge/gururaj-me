@@ -193,7 +193,7 @@ COMPRESS_PRECOMPILERS = (
     ('text/x-scss', 'django_libsass.SassCompiler'),
 )
 
-STATIC_URL = 'https://iamgururaj-blog-images.s3.amazonaws.com/'
+STATIC_URL = 'https://iamgururaj-blog-images.s3.amazonaws.com/static/'
 COMPRESS_URL = STATIC_URL
 
 STATICFILES_LOCATION = 'static'
