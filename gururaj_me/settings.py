@@ -194,6 +194,7 @@ COMPRESS_PRECOMPILERS = (
 )
 
 STATIC_URL = 'https://s3.us-east-2.amazonaws.com/iamgururaj-blog-images/'
+COMPRESS_URL = STATIC_URL
 
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
