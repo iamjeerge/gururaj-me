@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'opbeat.contrib.django',
+    'storages'
 ]
 
 INSTALLED_APPS += PUPUT_APPS
