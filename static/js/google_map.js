@@ -11,7 +11,7 @@ function init() {
 
     var mapOptions = {
         // How zoomed in you want the map to start at (always required)
-        zoom: 9,
+        zoom: 10,
 
         // The latitude and longitude to center the map (always required)
         center: myLatlng,
@@ -33,13 +33,13 @@ function init() {
     var addresses = ['Belagavi'];
 
     for (var x = 0; x < addresses.length; x++) {
-        $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address=' + addresses[x] + '&sensor=false', null, function(data) {
+        $.getJSON('https://maps.googleapis.com/maps/api/js?key=ey=AIzaSyDOwbncSYoacRqqZl-VCsoSyi0gxlrtyZQ/geocode/json?address=' + addresses[x] + '&sensor=false', null, function(data) {
             var p = data.results[0].geometry.location
             var latlng = new google.maps.LatLng(p.lat, p.lng);
             new google.maps.Marker({
                 position: latlng,
                 map: map,
-                icon: 'http://www.gururaj.me/static/images/loc.png'
+                icon: 'https://iamgururaj-blog-images.s3.amazonaws.com/static/images/loc.png'
             });
 
         });

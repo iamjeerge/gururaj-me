@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .icon.teal {
-  color: #F77604;
+  color: #ffa500;
 }
 
 .icon.white {
@@ -483,7 +483,7 @@ p {
 
 a {
   outline: none;
-  color: #F77604;
+  color: #ffa500;
   text-decoration: none;
 }
 
@@ -550,7 +550,7 @@ dd {
 }
 
 .help-block a {
-  color: #F77604;
+  color: #ffa500;
 }
 
 .help-info,
@@ -697,7 +697,7 @@ body.ready .tab-nav a {
 
 .tab-nav.merged {
   margin-top: 0;
-  background-color: #F77604;
+  background-color: #ffa500;
 }
 
 .tab-content section {
@@ -711,7 +711,7 @@ body.ready .tab-nav a {
 
 @media screen and (min-width: 50em) {
   .tab-nav.merged {
-    background-color: #F77604;
+    background-color: #ffa500;
   }
   .tab-nav li {
     width: auto;
@@ -785,7 +785,7 @@ body.ready .tab-nav a {
   padding-left: 0;
   list-style-type: none;
   font-style: normal;
-  background-color: #F77604;
+  background-color: #ffa500;
   position: absolute;
   overflow: hidden;
   top: 100%;
@@ -887,7 +887,7 @@ body.ready .tab-nav a {
 .dropdown .dropdown-toggle {
   color: #fff;
   text-transform: uppercase;
-  background-color: #F77604;
+  background-color: #ffa500;
   line-height: 2.8em;
   cursor: pointer;
   height: 100%;
@@ -1045,13 +1045,13 @@ body.ready .dropdown ul {
 
 .t-default .u-btn-current {
   border-color: rgba(0, 0, 0, 0.15);
-  color: #F77604;
+  color: #ffa500;
 }
 
 .t-default .u-btn-current:hover {
-  background: #F77604;
+  background: #ffa500;
   color: #fff;
-  border-color: #F77604;
+  border-color: #ffa500;
 }
 
 .t-default .u-btn-current:active {
@@ -1447,7 +1447,7 @@ input[type=radio]:before {
 
 input[type=radio]:checked:before {
   content: 'K';
-  color: #F77604;
+  color: #ffa500;
 }
 
 input[type=checkbox] {
@@ -1475,7 +1475,7 @@ input[type=checkbox]:before {
 }
 
 input[type=checkbox]:checked:before {
-  color: #F77604;
+  color: #ffa500;
 }
 
 .button {
@@ -1488,8 +1488,8 @@ input[type=checkbox]:checked:before {
   font-weight: normal;
   vertical-align: middle;
   display: inline-block;
-  background-color: #F77604;
-  border: 1px solid #F77604;
+  background-color: #ffa500;
+  border: 1px solid #ffa500;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
@@ -1503,7 +1503,7 @@ input[type=checkbox]:checked:before {
 }
 
 .button:hover {
-  color: #F77604;
+  color: #ffa500;
 }
 
 .button.yes {
@@ -1745,7 +1745,7 @@ body.ready .button.button-longrunning span {
 }
 
 .button-secondary {
-  color: #F77604;
+  color: #ffa500;
   background-color: transparent;
 }
 
@@ -1764,7 +1764,7 @@ body.ready .button.button-longrunning span {
 }
 
 .button-neutral:hover {
-  color: #F77604;
+  color: #ffa500;
 }
 
 .yes {
@@ -2154,7 +2154,7 @@ li.focused > .help {
 .time_field.icon-spinner:after,
 .date_time_field.icon-spinner:after,
 .url_field.icon-spinner:after {
-  color: #F77604;
+  color: #ffa500;
   opacity: 0.8;
   text-align: center;
   top: 0.3em;
@@ -2408,7 +2408,7 @@ li.inline:first-child {
 }
 
 .drop-zone.hovered {
-  border-color: #F77604;
+  border-color: #ffa500;
   background-color: #f4fcfc;
 }
 
@@ -2644,7 +2644,7 @@ body.ready .listing.chooser tbody .title a {
 }
 
 .listing.chooser tbody tr:hover {
-  background-color: #F77604;
+  background-color: #ffa500;
   color: #fff;
 }
 
@@ -2744,7 +2744,7 @@ body.ready .listing.chooser tbody .title a {
 }
 
 .listing .title h2 a:hover {
-  color: #F77604;
+  color: #ffa500;
 }
 
 .listing .actions {
@@ -2779,8 +2779,8 @@ body.ready .listing.chooser tbody .title a {
 }
 
 .listing .button-secondary:hover {
-  border-color: #F77604;
-  background-color: #F77604;
+  border-color: #ffa500;
+  background-color: #ffa500;
 }
 
 .listing .button-secondary {
@@ -2809,7 +2809,7 @@ body.ready .listing.chooser tbody .title a {
 }
 
 .listing .children a {
-  color: #F77604;
+  color: #ffa500;
   display: block;
 }
 
@@ -2827,7 +2827,7 @@ body.ready .listing.chooser tbody .title a {
 }
 
 .listing .no-children a:hover {
-  color: #F77604;
+  color: #ffa500;
 }
 
 .listing.small .children a:before {
@@ -2845,7 +2845,7 @@ body.ready .listing.chooser tbody .title a {
 }
 
 .listing th.ord a:hover:before {
-  color: #F77604;
+  color: #ffa500;
 }
 
 .listing .handle {
@@ -2921,8 +2921,8 @@ body.ready .listing .index .title h2 a {
 
 .listing .index .button {
   background-color: #fff;
-  color: #F77604;
-  border-color: #F77604;
+  color: #ffa500;
+  border-color: #ffa500;
 }
 
 .listing .index .button:hover {
@@ -2977,7 +2977,7 @@ table.listing {
 
 .page-explorer .listing .index {
   color: #fff;
-  background-color: #F77604;
+  background-color: #ffa500;
 }
 
 .page-explorer .listing .index td {
@@ -3172,7 +3172,7 @@ table.listing {
     background-color: #fdfdfd;
   }
   .listing.images > li:hover img {
-    border-color: #F77604;
+    border-color: #ffa500;
   }
   .listing.images a {
     color: inherit;
@@ -3196,7 +3196,7 @@ table.listing {
     opacity: 1;
   }
   .listing tr:hover .children {
-    background-color: #F77604;
+    background-color: #ffa500;
   }
   .listing tr:hover .children a:before {
     color: #fff;
@@ -3428,7 +3428,7 @@ td.ord .handle {
 }
 
 .nolink:hover {
-  color: #F77604;
+  color: #ffa500;
 }
 
 .status-tag {
@@ -3454,8 +3454,8 @@ td.ord .handle {
 form.status-tag:hover,
 a.status-tag:hover,
 a.status-tag.primary:hover {
-  border-color: #F77604;
-  color: #F77604;
+  border-color: #ffa500;
+  color: #ffa500;
 }
 
 form.status-tag:hover {
@@ -3467,7 +3467,7 @@ form.status-tag:hover {
 .privacy-indicator .label-private:before,
 .privacy-indicator .label-public:before {
   font-size: 1.5em;
-  color: #F77604;
+  color: #ffa500;
 }
 
 .privacy-indicator.public .label-private {
@@ -3480,7 +3480,7 @@ form.status-tag:hover {
 
 .tag {
   border-radius: 2px;
-  background-color: #F77604;
+  background-color: #ffa500;
   padding-right: 0.5em;
   padding: 0.2em 0.5em;
   color: #fff;
@@ -3547,7 +3547,7 @@ a.tag:hover {
   -moz-animation: spin 0.5s infinite linear;
   content: '1';
   z-index: 2;
-  color: #F77604;
+  color: #ffa500;
 }
 
 hr {
@@ -3605,7 +3605,7 @@ img {
 header {
   padding-top: 1em;
   padding-bottom: 1em;
-  background-color: #F77604;
+  background-color: #ffa500;
   margin-bottom: 2em;
   color: #fff;
 }
@@ -3788,7 +3788,7 @@ header .field-content {
 .progress {
   border-radius: 1.2em;
   background-color: #246060;
-  border: 1px solid #F77604;
+  border: 1px solid #ffa500;
   opacity: 0;
 }
 
@@ -3808,7 +3808,7 @@ body.ready .progress.active {
   line-height: 1.2em;
   color: #fff;
   font-size: 0.85em;
-  background-color: #F77604;
+  background-color: #ffa500;
   height: 1.2em;
   padding-right: 1em;
 }
@@ -3883,7 +3883,7 @@ body.ready .progress .bar {
   position: relative;
   white-space: nowrap;
   width: 2em;
-  color: #F77604;
+  color: #ffa500;
   text-transform: none;
   text-align: center;
 }
@@ -4109,7 +4109,7 @@ body.ready .progress .bar {
 .xdsoft_datetimepicker .xdsoft_calendar td:hover,
 .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div:hover {
   color: #fff;
-  background: #F77604;
+  background: #ffa500;
 }
 
 .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_today {
@@ -5397,7 +5397,7 @@ footer .meta a {
 }
 
 footer .meta a:hover {
-  color: #F77604;
+  color: #ffa500;
 }
 
 @media screen and (max-width: 50em) {
@@ -5726,7 +5726,7 @@ footer,
   }
   .breadcrumb li a:after,
   .breadcrumb li span:after {
-    color: #F77604;
+    color: #ffa500;
   }
   footer {
     width: 80%;

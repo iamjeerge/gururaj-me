@@ -26,7 +26,7 @@ span {
 ul.links {
     margin: 0px 0 25px 0;
     border-bottom: 0;
-    border-top: 1px dotted #F77604;
+    border-top: 1px dotted #ffa500;
     padding: 5px 0;
 }
 
@@ -39,7 +39,7 @@ ul.links li {
 }
 
 ul.links li i {
-    color: #F77604;
+    color: #ffa500;
 }
 
 ul.links li a {
@@ -53,7 +53,7 @@ ul.links li ul {
 }
 
 ul.sidebar {
-    border-top: 2px solid #F77604;
+    border-top: 2px solid #ffa500;
     background-color: #ededed;
     padding: 20px;
     margin-bottom: 50px;
@@ -74,7 +74,7 @@ ul.sidebar li {
 
 ul.sidebar li.tag {
     display: inline-block;
-    background-color: #F77604;
+    background-color: #ffa500;
     padding: 3px 10px;
 }
 
@@ -90,7 +90,7 @@ ul.sidebar li a {
 }
 
 ul.sidebar ul li i {
-    color: #F77604;
+    color: #ffa500;
 }
 
 ul.sidebar li > ul{
@@ -110,7 +110,7 @@ a {
 }
 
 a:hover {
-    color: #F77604;
+    color: #ffa500;
 }
 
 .blog_btn {
@@ -123,7 +123,7 @@ a:hover {
     margin-bottom: 50px;
     text-align: right;
     background-color: transparent;
-    color: #F77604;
+    color: #ffa500;
     padding: 10px 0;
 }
 
@@ -152,7 +152,7 @@ h2 a {
 }
 
 h2 a:hover {
-    color: #F77604;
+    color: #ffa500;
     text-decoration: none;
 }
 
@@ -169,7 +169,7 @@ p {
 }
 
 .about {
-    background: #F77604 none repeat scroll 0 0;
+    background: #ffa500 none repeat scroll 0 0;
     margin-bottom: 4em;
 }
 
@@ -214,7 +214,7 @@ p {
 }
 
 .blog_sidebar .input-group-btn {
-    background: #F77604;
+    background: #ffa500;
     -webkit-border-radius: 0 5px 5px 0;
     -moz-border-radius: 0 5px 5px 0;
     border-radius: 0 5px 5px 0;
@@ -241,7 +241,7 @@ p {
 }
 
 .blog_sidebar .rss-sitemap i {
-    color: #F77604;
+    color: #ffa500;
 }
 
 .blog_sidebar .rss-sitemap span {
@@ -288,7 +288,7 @@ p {
 .lateralPosts li {
     font-size: 0.7em;
     display: inline-block;
-    color: #F77604;
+    color: #ffa500;
 }
 
 .searchTerm {
@@ -322,7 +322,7 @@ p {
 .itemPosts {
     margin-top: 10px;
     padding-top: 15px;
-    border-top: 1px dotted #F77604;
+    border-top: 1px dotted #ffa500;
 }
 
 .itemPosts h3 {
@@ -335,7 +335,7 @@ p {
 }
 
 .itemPosts .box.feature a {
-    color: #F77604;
+    color: #ffa500;
 }
 
 .pagination {
@@ -346,23 +346,23 @@ p {
 
 .pagination .endless_separator {
     background: transparent;
-    color: #F77604;
+    color: #ffa500;
     font-size: 18px;
 }
 
 .pagination span.endless_page_current,
 .pagination .endless_page_link {
     padding: 7px 11px;
-    color: #F77604;
+    color: #ffa500;
 }
 
 .pagination .endless_page_current:active,
 .pagination .endless_page_link:active {
-    background: #F77604;
+    background: #ffa500;
 }
 
 .pagination span {
-    background: #F77604;
+    background: #ffa500;
 }
 
 .pagination span strong {
@@ -370,7 +370,7 @@ p {
 }
 
 .footer_bottom {
-    background-color: #F77604;
+    background-color: #ffa500;
     padding: 20px 40px;
 }
 
@@ -424,7 +424,7 @@ p {
 }
 
 .menu li.active > a {
-    background-color: #F77604;
+    background-color: #ffa500;
     color: #fff;
     -webkit-transition: all .2s linear;
     transition: all .2s linear;
@@ -446,7 +446,7 @@ p {
 
 .menu li.parent > a .open-sub:before,
 .menu li.parent > a .open-sub:after {
-    background: #F77604;
+    background: #ffa500;
     content: "";
     display: block;
     height: 2px;
