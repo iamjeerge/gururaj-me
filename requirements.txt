@@ -15,6 +15,6 @@ Pygments==2.2.0
 requests==2.18.1
 sqlparse==0.2.3
 whitenoise==3.3.0
-puput==1.13.4
+puput
 django-storages==1.6.5
 boto3==1.5.2
