@@ -33,7 +33,7 @@ function init() {
     var addresses = ['Belagavi'];
 
     for (var x = 0; x < addresses.length; x++) {
-        $.getJSON('https://maps.googleapis.com/maps/api/js?key=ey=AIzaSyDOwbncSYoacRqqZl-VCsoSyi0gxlrtyZQ/geocode/json?address=' + addresses[x] + '&sensor=false', null, function(data) {
+        $.getJSON('https://maps.googleapis.com/maps/api/js?key=ey=AIzaSyDOwbncSYoacRqqZl-VCsoSyi0gxlrtyZQ/geocode/json?address=' + addresses[x] , null, function(data) {
             var p = data.results[0].geometry.location
             var latlng = new google.maps.LatLng(p.lat, p.lng);
             new google.maps.Marker({
