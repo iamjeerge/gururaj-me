@@ -14,7 +14,6 @@ import os
 import dj_database_url
 import sys
 import environ
-from puput import PUPUT_APPS
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -42,31 +41,18 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'opbeat.contrib.django',
-    'storages'
+    'django.contrib.staticfiles'
 ]
 
-INSTALLED_APPS += PUPUT_APPS
-
-OPBEAT = {
-    'ORGANIZATION_ID': '7bfd27b572d34db8a5497dd96e8128cc',
-    'APP_ID': '3af10f1208',
-    'SECRET_TOKEN': '6cdf2087f3a53ea8219159e79868b9948b27b764',
-}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    # 'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'opbeat.contrib.django.middleware.OpbeatAPMMiddleware',
-    'wagtail.wagtailcore.middleware.SiteMiddleware',
-    'wagtail.wagtailredirects.middleware.RedirectMiddleware'
 ]
 
 ROOT_URLCONF = 'gururaj_me.urls'
@@ -95,9 +81,6 @@ TEMPLATES = [
         },
     },
 ]
-
-WSGI_APPLICATION = 'gururaj_me.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
@@ -162,9 +145,6 @@ REST_FRAMEWORK = {
     ]
 }
 
-# Honor the 'X-Forwarded-Proto' header for request.is_secure()
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
 STATIC_ROOT = os.path.join(str(PROJECT_ROOT), 'staticfiles')
 
 
@@ -179,30 +159,6 @@ STATICFILES_DIRS = (
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'compressor.finders.CompressorFinder',
 )
 
-AWS_STORAGE_BUCKET_NAME = 'iamgururaj-blog-images'
-AWS_S3_REGION_NAME = 'us-east-2'
-AWS_ACCESS_KEY_ID = 'AKIAIFGMUBT7J2CX3CEQ'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
-
-# django-compressor settings
-COMPRESS_PRECOMPILERS = (
-    ('text/x-scss', 'django_libsass.SassCompiler'),
-)
-
-STATIC_URL = 'https://iamgururaj-blog-images.s3.amazonaws.com/static/'
-COMPRESS_URL = STATIC_URL
-
-STATICFILES_LOCATION = 'static'
-STATICFILES_STORAGE = 'custom_storages.StaticStorage'
-
-MEDIAFILES_LOCATION = 'media'
-DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
-
-# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3Boto3Storage'
-# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-
-WAGTAIL_SITE_NAME = 'gururaj.me blog'
+STATIC_URL = '/static/'
