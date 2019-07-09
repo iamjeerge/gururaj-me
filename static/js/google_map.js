@@ -36,6 +36,7 @@ function init() {
         $.getJSON('https://maps.googleapis.com/maps/api/js?key=ey=AIzaSyBX4-Fyns5uGDXPtMG4cXWyZPVwX7NZH4k/geocode/json?address=' + addresses[x] , null, function(data) {
             var p = data.results[0].geometry.location
             var latlng = new google.maps.LatLng(p.lat, p.lng);
+            debugger;
             new google.maps.Marker({
                 position: latlng,
                 map: map,
