@@ -1,2 +1,0 @@
-[![build status](https://gitlab.com/iamgururaj/gururajme/badges/master/build.svg)](https://gitlab.com/iamgururaj/gururajme/commits/master)
-[![coverage report](https://gitlab.com/iamgururaj/gururajme/badges/master/coverage.svg)](https://gitlab.com/iamgururaj/gururajme/commits/master)
