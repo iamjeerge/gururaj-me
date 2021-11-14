@@ -10,12 +10,12 @@ name: Codacy Security Scan
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
     # The branches below must be a subset of the branches above
-    branches: [ master ]
+    branches: [master]
   schedule:
-    - cron: '32 7 * * 3'
+    - cron: "32 7 * * 3"
 
 jobs:
   codacy-security-scan:
