@@ -1,20 +1,20 @@
-coverage
+# coverage
 dj-database-url
 Django
 django-environ
 django-filter
 django-pipeline
 django-pipeline-browserify
-djangorestframework
+# djangorestframework
 gunicorn
-httpie
+# httpie
 #opbeat
-Markdown
-psycopg2
-Pygments
-requests
-sqlparse
-whitenoise
-puput
-django-storages
-boto3
+# Markdown
+# psycopg2
+# Pygments
+# requests
+# sqlparse
+# whitenoise
+# puput
+# django-storages
+# boto3
