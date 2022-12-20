@@ -8,7 +8,7 @@ django-pipeline-browserify
 djangorestframework
 gunicorn
 httpie
-opbeat
+#opbeat
 Markdown
 psycopg2
 Pygments
